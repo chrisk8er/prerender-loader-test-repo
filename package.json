@@ -36,7 +36,7 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-react": "^7.1.0",
     "file-loader": "^1.1.5",
-    "html-webpack-plugin": "^4.0.0-alpha.2",
+    "html-webpack-plugin": "^4.0.0-beta.5",
     "klaw-sync": "^4.0.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.5.0",
