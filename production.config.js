@@ -16,10 +16,10 @@ const config = objectAssign(base, {
 Object.keys(config.entry).map(i => {
   config.plugins.push(
     new HtmlWebpackPlugin({
-      // template: PATH.HTML_PATH + '/layout.html',
-      template: `!!prerender-loader?string!${PATH.HTML_PATH}/layout.html`,
-      // template: `!!prerender-loader?string!${PATH.HTML_PATH}/templates/layout-${i}.html`,
-      // template: `!!prerender-loader?${JSON.stringify({ string: true, params: { url: `/${i}/` } })}!${PATH.HTML_PATH}/templates/layout-${i}.html`,
+      // template: PATH.HTML_PATH + '/template.html',
+      template: `!!prerender-loader?string!${PATH.HTML_PATH}/template.html`,
+      // template: `!!prerender-loader?string!${PATH.HTML_PATH}/templates/template-${i}.html`,
+      // template: `!!prerender-loader?${JSON.stringify({ string: true, params: { url: `/${i}/` } })}!${PATH.HTML_PATH}/templates/template-${i}.html`,
       title: '',
       filename: `${i}.html`,
       id: i,

@@ -14,7 +14,7 @@ const config = objectAssign(base, {
 Object.keys(config.entry).map(i => {
   config.plugins.push(
     new HtmlWebpackPlugin({
-      template: PATH.HTML_PATH + '/layout.html',
+      template: PATH.HTML_PATH + '/template.html',
       title: 'test',
       id: i,
       filename: `${i}.html`,
