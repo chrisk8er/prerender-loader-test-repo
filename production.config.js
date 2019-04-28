@@ -12,17 +12,12 @@ const config = objectAssign(base, {
     filename: '[name]_[chunkhash].js',
   },
 });
-
 Object.keys(config.entry).map(i => {
   config.plugins.push(
     new HtmlWebpackPlugin({
-      // template: PATH.HTML_PATH + '/template.html',
-      template: `!!prerender-loader?string!${PATH.HTML_PATH}/template.html`,
-      // template: `!!prerender-loader?string!${PATH.HTML_PATH}/templates/template-${i}.html`,
-      // template: `!!prerender-loader?${JSON.stringify({ string: true, params: { url: `/${i}/` } })}!${PATH.HTML_PATH}/templates/template-${i}.html`,
-      title: '',
+      template: `!!prerender-loader?string&entry=${i}!${PATH.HTML_PATH}/template.html`,
+      title: `${i}`,
       filename: `${i}.html`,
-      id: i,
       hash: false,
       chunks: [i],
     }),

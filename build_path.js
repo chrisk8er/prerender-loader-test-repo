@@ -1,6 +1,5 @@
 const path = require('path');
 const ROOT_PATH = path.join(__dirname);
-const PUBLIC_PATH = path.resolve(__dirname, '../', '../', 'public');
 const ASSET_PATH = path.join(ROOT_PATH, 'dist');
 const NODE_MODULES_PATH = path.join(ROOT_PATH, './node_modules');
 const HTML_PATH = path.join(ROOT_PATH, './');

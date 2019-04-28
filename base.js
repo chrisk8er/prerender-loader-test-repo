@@ -2,13 +2,15 @@ const webpack = require('webpack');
 const path = require('path');
 const PATH = require('./build_path');
 const WebpackAssetsManifest = require('webpack-assets-manifest');
+const ENTRY_LIST_OPTION = ['index', 'show'];
+const entry = {};
+
+ENTRY_LIST_OPTION.filter(i => {
+  entry[i] = `${PATH.ROOT_PATH}/${i}.js`;
+});
 var config = (module.exports = {
   context: PATH.ROOT_PATH,
-  entry: {
-    index: './index.js',
-    a: './a.js',
-    b: './b.js',
-  },
+  entry,
   module: {
     rules: [
       {
