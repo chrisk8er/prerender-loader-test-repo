@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 const App = () => (
   <div>
-    <div>Index</div>
+    <div>Show</div>
     <div>
-      <a href="/show.html">Go Show</a>
+      <a href="/">Go Index</a>
     </div>
   </div>
 );
